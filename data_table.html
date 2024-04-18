@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover{
+            background-color: #D6EEEE;
+        }
+    </style>
+</head>
+<body style="background-color: #93EEAA;"> 
+    <h1>Online sales </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>InvoiceNo</th>
+                <th>StockCode</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>InvoiceDate</th>
+                <th>UnitPrice</th>
+                <th>CustomerID</th>
+                <th>Country</th>
+        </thead>
+        <tbody>
+            {% for row in auto %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>{{ row[7] }}</td>
+            </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
+</body>
+</html>
